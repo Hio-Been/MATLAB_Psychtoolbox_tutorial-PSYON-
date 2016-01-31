@@ -13,8 +13,14 @@ screen_Size=[       % size = [ 0, 0, 1000, 500 ]
     500];           % Number of pixels (Y length)
 
 % (2) Open Window
-Screen('OpenWindow', 0, background_Color, screen_Size);
+[win,rect] = Screen('OpenWindow', 0, background_Color, screen_Size);
+message = 'Press ESC to quit!';
 
+Screen(win, 'TextSize', 50);
+Screen(win, 'DrawText', message,...
+    rect(3)/3, rect(4)/2,[0 0 0]);
+Screen(win, 'Flip')
 % (3) Wait Keyboard and Close window  
-hb_keyboard_check;
+hb_keyboard_check; % ESC -> exit
 Screen('CloseAll');  
+ 

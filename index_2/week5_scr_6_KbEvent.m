@@ -1,5 +1,10 @@
 % week5_scr_6_KbEvent.m
 
+% 1. Press ESC to exit
+% 2. Press arrow key (left, right, up, down) to move the box
+
+
+
 % Clear the workspace
 close all; clear all; sca; Screen('Preference', 'SkipSyncTests', 2 );
 PsychDefaultSetup(2);
